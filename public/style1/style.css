@@ -421,10 +421,15 @@ div .skill {
   #hobbies{
     position: relative;
   }  
-
+  .content::before{
+    visibility: hidden;
+  }
+  
   #contact  h3 {
+    
     color: black;
     display: inline;
+    
 }
 
 #contact{
@@ -433,6 +438,7 @@ div .skill {
     width: 100px;
     left: 5px;
     margin-left: 10px;
+    margin-top: 90px;
 }
 
 #contact .contact .contact-value{
@@ -447,7 +453,25 @@ div .skill {
 }
 }
 
+@media  (min-width:300px) and (max-width:900px) {
 
+#about h3{
+  border-bottom: 1px solid red ;
+}
+
+#competencies h3 {
+    border-bottom: 1px solid red;
+}
+#education h3 {
+    border-bottom: 1px solid red;
+}
+
+#hobbies h3 {
+    border-bottom: 1px solid red;
+}
+
+
+}
 .contact{
     padding: 0px;
     display: flex;
@@ -459,6 +483,7 @@ div .skill {
     
     
 }
+
 
 
 
