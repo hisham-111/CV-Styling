@@ -1,9 +1,11 @@
+
+/* start general attribute */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.1pc;
   padding: 50px 15%;
 }
-
+/* End general attribute */
 hgroup h1 {
   margin-top: 2pc;
   padding: 2pc 0;
@@ -204,7 +206,7 @@ dl {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 0.9pc;
       padding: 10px 2%;
-      /* min-width: 350px; */
+
   }
 
   
@@ -231,7 +233,7 @@ dl {
       color: rgb(151, 151, 151);
       margin-bottom: 5pc;
       text-align: justify;
-      /* padding-left: 15px; */
+
   }
   
   #about h3 {
@@ -280,14 +282,11 @@ dl {
   }
   section:not(:first-child) {
       display: block;
-      /* grid-template-columns: [section] 168px [content] auto; */
+    
   
   }
   
-  /* section:not(:first-child) div {
-  
-      grid-column-start: content;
-  } */
+
   
   #competencies h3 {
       margin  : 0;
