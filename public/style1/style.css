@@ -1,425 +1,533 @@
+/* start gloabl rules */
 
-/* start Generla informations */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.1pc;
-  padding: 50px 15%;
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: sans-serif;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1500px;
+  position: relative;
 }
 
+* {box-sizing: border-box}
 
-/* end Generla informations */
+/* end gloabl rules */
 
-/* start header */
-hgroup h1 {
-  margin-top: 2pc;
-  padding: 2pc 0;
-  border-bottom: 3px solid rgb(199, 199, 199);
+
+/* Start Header */
+
+
+header{
+  background-color: gray;
+  position: relative;
+  width: 75%;
+  margin-left: 250px;
+
 
 }
-
-hgroup h2 {
-  display: none;
-}
-
-
-
-figure img {
-  position: absolute;
-  left: 67%;
-  top: 5pc;
-  width: 13pc;
-  height: 13pc;
-  transform: rotate(-15deg);
-}
-/* end header */
-
-/* start content */
-#about {
-  width: 70%;
-  color: rgb(151, 151, 151);
-  margin-bottom: 5pc;
-}
-
-#about h3 {
-  display: none;
-}
-
-.skills {
+header div{
   display: flex;
-  
+  margin-left: 170px;
+
+
 }
 
-.skill {
-  background-color: #349999;
-  margin: 5px;
-  padding: 8px;
-  width: 134px;
-  color: white;   
+@media  (min-width:300px) and (max-width:900px){
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+}
+header div{
+  width: 100%;
+  height: 300px;
+  margin-left: 10px;
+}
+hgroup{
+  width: 100%;
+
+}
+header img{
+  position: absolute;
+  top: 50%;
+  left: 15%;
 }
 
-[data-skill="5"]::after {
-  content: "\2605\2605\2605";
-  float: right;
+
+
 }
 
-[data-skill="3"]::after {
-  content: "\2605\2605";
-  float: right;
+
+header div hgroup {
+  color: red;
+
 }
 
-[data-skill="1"]::after {
-  content: "\2605";
-  float: right;
-}
-
-[data-skill="9"]::after {
-  content: "\2605\2605\2605\2605\2605";
-  float: right;
-}
-
-[data-skill="7"]::after {
-  content: "\2605\2605\2605\2605";
-  float: right;
-}
-.skills-secondary {
-  font-size: 10px;
-}
-section:not(:first-child) {
+.content{
+  width: 80%;
+  margin-right: auto;
+  margin-left: 300px;
+  margin-top: 60px;
   display: grid;
-  grid-template-columns: [section] 168px [content] auto;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  /* position: relative; */
 
 }
 
-section:not(:first-child) div {
+.content::before{
+  content: "";
+  right: 175px;
+  content: "";
+  background-color: #c58e8e;
+  width: 68%;
+  height: 1px;
+  position: absolute;
+  top: 255px;
+}
 
-  grid-column-start: content;
+
+.content #about{
+  width: 70%;
+  position: relative;
+
+}
+
+
+.content #about::before{
+  content: "";
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: -25px;
+
+
+}
+
+
+
+.content #competencies{
+  width: 70%;
+  position: relative;
+  z-index: -1;
+  margin-top: 85px;
+
+}
+
+
+
+@media  (min-width:300px) and (max-width:900px) {
+  .content {
+      display: grid;
+      /* width: 500px; */
+      grid-template-columns: auto;
+      justify-content: center;
+      margin-left: 28px;
+      width: 490px;
+
+    }
+
+    .content::before{
+      display: none;
+    }
+}
+
+@media (min-width:300px) and (max-width:900px)  {
+  body {
+    width: 400px;
+
+    }
 }
 
 #competencies h3 {
-  margin  : 0;
-  grid-row-end: span 3;
-}
 
-h3 {
-  border-right: 2px solid black;
-  grid-row-end: span 2;
-  font-style: italic;
-}
-
-section div {
-  padding-left: 1pc;
-}
-
-h4 {
-  color: #349999;
-}
-
-.experience-details {
-  text-align: right;
-  padding: 20px 0;
-  color: rgb(151, 151, 151);
-}
-
-.experience-date-separator {
-  color:#349999;
-}
-
-.experience{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-section > div > h4 {
-  flex-basis:50%;
-}
-
-.experience > div {
-  flex-basis: 50%;
-}
-
-.experience-description {
-  text-align: justify;
-  margin: 20px 0;
-}
-
-.experience-institution {
-  display: none;
-}
-/* end content */
-
-/* start contact  */
-#contact > h3 {
-  display: none;
-}
-
-#contact dt {
-  display: none;
-}
-
-.contact-skype {
-  display: none;
-}
-
-.contacts {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: auto 100px auto 150px;
+  margin-bottom: 38px;
+  margin-top: -65px;
 
 }
-
-#contact {
-  display: block;
+#competencies::before{
+  content: "";
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -62px;
+  left: -25px;
 }
-/* end contact  */
-dd {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  margin-left: 0;
-  
+
+#competencies::after{
+  content: "Main";
+  position: absolute;
+  top: -28px;
+  left: 1px;
+  font-weight: 600;
 }
 
 
-dd a {
-  color: transparent;
-  width: 100%;
-  height: 100%;
+
+
+#competencies .skills-primary .skill{
+  color: white;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #ecd6d6;
 }
 
-dl {
+#competencies .skills-secondary {
+  margin-top:40px;
+} 
+
+#competencies .skills-secondary::before {
+  content: "Other";
+  position: absolute;
+  top: 132px;
+  left: 1px;
+  font-weight: 600;
+
+} 
+
+#competencies .skills-secondary .skill{
+  color: white;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #ecd6d6;
+}
+
+div .skill {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+[data-skill="5"] span::before{
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30px;
+  background-color: red;
+  margin-top: -5px;
+  color: white;
+  z-index: -1;
+  margin-left: -5px;
+
+}
+
+
+
+[data-skill="3"]::before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 30px;
+  background-color: red;
+  margin-top: -5px;
+  color: white;
+  z-index: -1;
+  margin-left: -5px;
+
+} 
+
+
+
+
+.skills-secondary [data-skill="5"] span::before {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 30px;
+  background-color: rgb(218, 57, 57);
+  margin-top: -5px;
+  color: white;
+  z-index: -1;
+  margin-left: -4px;
+  margin-right: 50px;
+
+} 
+
+
+
+[data-skill="1"]::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 30px;
+  background-color: red;
+  margin-top: -5px;
+  color: white;
+  z-index: -1;
+  margin-left: -5px;
+
+
+}
+
+
+[data-skill="9"]::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 30px;
+  background-color: #da3939;
+  margin-top: -5px;
+  color: white;
+  z-index: -1;
+  margin-left: -5px;
+
+
+}
+
+
+[data-skill="7"]::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 30px;
+  background-color: #da3939;
+  margin-top: -5px;
+  color: white;
+  z-index: -1;
+  margin-left: -5px;
+
+
+} 
+
+
+#experiences{
+  width: 80%;
+  position: relative;
+}
+#experiences::after{
+  content: "";
+  left: -2px;
+  content: "";
+  background-color: #c58e8e;
+  width: 218%;
+  height: 1px;
+  position: absolute;
+  top: 48px;
+}
+
+#experiences .experience-type {
+color: red;
+}
+
+
+#experiences .experience-institution{
+  color: #e02121;
+  font-size: 10px;
+}
+
+#experiences .experience-details{
+  color: #c7aeae;
+}
+
+#experiences .experience-date-separator{
+  color: black;
+}
+
+
+#experiences::before{
+  content: "";
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  left: -25px;
+}
+
+#education{
+  width: 60%;
+  position: relative;
+}
+
+#education .experience-type{
+  color: red;
+}
+
+#education::before{
+
+  content: "";
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  left: -25px;
+}
+
+
+#education .experience-institution{
+  color: #e02121;
+  font-size: 10px;
+}
+
+#education .experience-date{
+  color: #c7aeae;
+}
+
+#education .experience-location{
+  color: #c7aeae;
+}
+
+
+#education .experience-date-separator{
+  color: black;
+}
+
+#hobbies{
+  position: relative;
+}
+#hobbies::before{
+  content: "";
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  left: -25px;
+}
+
+
+
+
+#contact{
+  width: 400px;
+  background-color: red;
+  position: absolute;
+  top: 10px;
+  right: 205px;
+
+}
+
+/* and (max-width:900px) */
+
+
+@media  (min-width:300px) and (max-width:900px)  {
+#hobbies{
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}  
+
+#contact .contact-value{
+  display: inline !important ;
+}
+#contact  h3 {
+  color: black;
+  display: inline !important ;
+  top: -50px;
+  position: absolute;
+} 
+
+#contact{
+  position: absolute;
+  top: 100%;
   width: 100px;
-  height: 100px;
-  background-position: center;
-  background-size: cover;
-}
-/* start social media images */
-.contact-email {
-  background-image: url(../images/email.png);
-
+  left: 15px;
+  margin-left: 10px;
 }
 
-.contact-phone {
-  background-image: url(../images/phone.png);
+#contact::before{
+  content: "";
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: -22px;
 }
 
-.contact-github {
-  background-image: url(../images/github.png);
+#contact .contact .contact-value{
+  color: black;
+  background-color: white;
+  margin: 0;
+
 }
 
-.contact-facebook {
-  background-image: url(../images/facebook.png);
+.contact-email::before{
+  display: none;
+}
 }
 
-/* end social media images */
 
-/* start media queries */
+.contact{
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width:fit-content;
 
-@media screen and (max-width: 799px) { 
-  body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 0.9pc;
-      padding: 10px 2%;
-  }
-
-  
-  hgroup h1 {
-      margin-top: 0;
-      padding: 2pc 0;
-      border-bottom: 3px solid rgb(199, 199, 199);
-  
-  }
-  
-  hgroup h2 {
-      display: none;
-  }
-  
-  figure img {
-      display: none;
-  }
-  .content {
-      width: 95%;
-      padding-left: 15px;
-  }
-  #about {
-      width: 100%;
-      color: rgb(151, 151, 151);
-      margin-bottom: 5pc;
-      text-align: justify;
-
-  }
-  
-  #about h3 {
-      display: none;
-  }
-  
-  .skills {
-      display: flex;
-      
-  }
-  
-  .skill {
-      background-color: #349999;
-      margin: 5px;
-      padding: 8px;
-      width: 130px;
-      color: white;   
-  }
-  
-  [data-skill="5"]::after {
-      content: "\2605\2605\2605";
-      float: right;
-  }
-  
-  [data-skill="3"]::after {
-      content: "\2605\2605";
-      float: right;
-  }
-  
-  [data-skill="1"]::after {
-      content: "\2605";
-      float: right;
-  }
-  
-  [data-skill="9"]::after {
-      content: "\2605\2605\2605\2605\2605";
-      float: right;
-  }
-  
-  [data-skill="7"]::after {
-      content: "\2605\2605\2605\2605";
-      float: right;
-  }
-  .skills-secondary {
-      font-size: 10px;
-  }
-  section:not(:first-child) {
-      display: block;
-  
-  }
-  
-
-  
-  #competencies h3 {
-      margin  : 0;
-      margin-bottom: 25px;
-  }
-  
-  h3 {
-      border-bottom: 2px solid black;
-      width: 40%;
-      border-right: none;
-      font-style: italic;
-      margin-top: 35px;
-  }
-  
-  section div {
-      padding-left: 0;
-  }
-  
-  h4 {
-      color: #349999;
-  }
-  
-  .experience-details {
-      text-align: right;
-      padding: 20px 0;
-      color: rgb(151, 151, 151);
-  }
-  
-  .experience-date-separator {
-      color:#349999;
-  }
-  
-  .experience{
-      display: flex;
-      flex-wrap: wrap;
-  }
-  
-  section > div > h4 {
-      flex-basis:50%;
-  }
-  
-  .experience > div {
-      flex-basis: 50%;
-  }
-  
-  .experience-description {
-      text-align: justify;
-      margin: 20px 0;
-  }
-  
-  .experience-institution {
-      display: none;
-  }
-  
-  #contact > h3 {
-      display: none;
-  }
-  
-  #contact dt {
-      display: none;
-  }
-  
-  .contact-skype {
-      display: none;
-  }
-  
-  .contacts {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      margin: auto;
-  
-  }
-  
-  #contact {
-      display: block;
-  }
-  
-  dd {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      margin-left: 0;
-      
-  }
-  
-  
-  dd a {
-      color: transparent;
-      width: 100%;
-      height: 100%;
-  }
-  
-  dl {
-      width: 100px;
-      height: 100px;
-      background-position: center;
-      background-size: cover;
-  }
-  
-
-  /*start socila media images */
-  .contact-email {
-      background-image: url(../images/email.png);
-  
-  }
-  
-  .contact-phone {
-      background-image: url(../images/phone.png);
-  }
-  
-  .contact-github {
-      background-image: url(../images/github.png);
-  }
-  
-  .contact-facebook {
-      background-image: url(../images/facebook.png);
-  }
-/*end socila media images */
-
- 
 }
 
- /* end media query */
+
+
+
+#contact  h3 {
+  display: none;
+}
+
+.contact-email::before{
+  content: "";
+  width: 350px;
+  height: 27px;
+  background-color: black;
+  position: absolute;
+  top: 20px;
+  left: 130px;
+
+
+}
+
+
+
+#contact .contact-value {
+  margin: 0;
+  background-color: black;
+  width: 350px;
+  color: red;
+  margin-left: 20px;
+  padding-right: 50px;
+  padding-bottom: 5px;
+
+
+}
+
+
+#contact .contact-value a{
+  color: red;
+  text-decoration: none;
+
+}
+
+
+.contact-type {
+  color: white;
+  width: 110px;
+}
+
+.contact dt {
+  margin-top: 5px;
+}
+.contact-skype .contact-value{
+  display: none;
+}
+
+.contact-email{
+  margin: 0;
+  padding: 0;
+}
